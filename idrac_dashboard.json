@@ -119,7 +119,7 @@
       "pluginVersion": "7.5.5",
       "targets": [
         {
-          "expr": "systemFQDN ",
+          "expr": "systemFQDN{instance=\"$Device\"}",
           "format": "table",
           "instant": false,
           "interval": "",
@@ -128,7 +128,7 @@
           "refId": "A"
         },
         {
-          "expr": "systemServiceTag",
+          "expr": "systemServiceTag{instance=\"$Device\"}",
           "format": "table",
           "hide": false,
           "interval": "",
@@ -136,7 +136,7 @@
           "refId": "B"
         },
         {
-          "expr": "systemExpressServiceCode",
+          "expr": "systemExpressServiceCode{instance=\"$Device\"}",
           "format": "table",
           "hide": false,
           "interval": "",
@@ -144,7 +144,7 @@
           "refId": "C"
         },
         {
-          "expr": "systemAssetTag",
+          "expr": "systemAssetTag{instance=\"$Device\"}",
           "format": "table",
           "hide": false,
           "interval": "",
@@ -152,7 +152,7 @@
           "refId": "D"
         },
         {
-          "expr": "systemDataCenterName",
+          "expr": "systemDataCenterName{instance=\"$Device\"}",
           "format": "table",
           "hide": false,
           "interval": "",
@@ -329,7 +329,7 @@
       "pluginVersion": "7.5.5",
       "targets": [
         {
-          "expr": "globalStorageStatus",
+          "expr": "globalStorageStatus{instance=\"$Device\"}",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -449,7 +449,7 @@
       "pluginVersion": "7.5.5",
       "targets": [
         {
-          "expr": "globalSystemStatus",
+          "expr": "globalSystemStatus{instance=\"$Device\"}",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -575,7 +575,7 @@
       "pluginVersion": "7.5.5",
       "targets": [
         {
-          "expr": "systemPowerState",
+          "expr": "systemPowerState{instance=\"$Device\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -701,7 +701,7 @@
       "pluginVersion": "7.5.5",
       "targets": [
         {
-          "expr": "physicalDiskComponentStatus\n/ ignoring(physicalDiskName) group_right\nphysicalDiskName",
+          "expr": "physicalDiskComponentStatus{instance=\"$Device\"}\n/ ignoring(physicalDiskName) group_right\nphysicalDiskName",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -764,7 +764,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "numEventLogEntries",
+          "expr": "numEventLogEntries{instance=\"$Device\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -926,7 +926,7 @@
       "pluginVersion": "7.5.5",
       "targets": [
         {
-          "expr": "intrusionStatus\n/ ignoring(intrusionLocationName) group_right\nintrusionLocationName",
+          "expr": "intrusionStatus{instance=\"$Device\"}\n/ ignoring(intrusionLocationName) group_right\nintrusionLocationName",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -1050,7 +1050,7 @@
       "pluginVersion": "7.5.5",
       "targets": [
         {
-          "expr": "virtualDiskComponentStatus",
+          "expr": "virtualDiskComponentStatus{instance=\"$Device\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -1174,7 +1174,7 @@
       "pluginVersion": "7.5.5",
       "targets": [
         {
-          "expr": "systemBIOSStatus\n/ ignoring(systemBIOSVersionName) group_right\nsystemBIOSVersionName",
+          "expr": "systemBIOSStatus{instance=\"$Device\"}\n/ ignoring(systemBIOSVersionName) group_right\nsystemBIOSVersionName",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -1310,7 +1310,7 @@
           "pluginVersion": "7.4.3",
           "targets": [
             {
-              "expr": "coolingDeviceStatus\n/ ignoring(coolingDeviceLocationName) group_right\ncoolingDeviceLocationName",
+              "expr": "coolingDeviceStatus{instance=\"$Device\"}\n/ ignoring(coolingDeviceLocationName) group_right\ncoolingDeviceLocationName",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 1,
@@ -1438,7 +1438,7 @@
           "pluginVersion": "7.4.3",
           "targets": [
             {
-              "expr": "pCIDeviceStatus\n/ ignoring(pCIDeviceDescriptionName) group_right\npCIDeviceDescriptionName",
+              "expr": "pCIDeviceStatus{instance=\"$Device\"}\n/ ignoring(pCIDeviceDescriptionName) group_right\npCIDeviceDescriptionName",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 1,
@@ -1492,7 +1492,7 @@
           "pluginVersion": "7.4.3",
           "targets": [
             {
-              "expr": "firmwareIndex",
+              "expr": "firmwareIndex{instance=\"$Device\"}",
               "format": "table",
               "interval": "",
               "intervalFactor": 1,
@@ -1500,7 +1500,7 @@
               "refId": "A"
             },
             {
-              "expr": "firmwareTypeName",
+              "expr": "firmwareTypeName{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -1508,7 +1508,7 @@
               "refId": "B"
             },
             {
-              "expr": "firmwareVersionName",
+              "expr": "firmwareVersionName{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -1670,7 +1670,7 @@
           "pluginVersion": "7.4.3",
           "targets": [
             {
-              "expr": "firmwareStatus\n/ ignoring(firmwareTypeName) group_right\nfirmwareTypeName",
+              "expr": "firmwareStatus{instance=\"$Device\"}\n/ ignoring(firmwareTypeName) group_right\nfirmwareTypeName",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 1,
@@ -1724,7 +1724,7 @@
           "pluginVersion": "7.4.3",
           "targets": [
             {
-              "expr": "powerSupplyIndex",
+              "expr": "powerSupplyIndex{instance=\"$Device\"}",
               "format": "table",
               "interval": "",
               "intervalFactor": 1,
@@ -1732,7 +1732,7 @@
               "refId": "A"
             },
             {
-              "expr": "powerSupplyLocationName",
+              "expr": "powerSupplyLocationName{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -1740,7 +1740,7 @@
               "refId": "C"
             },
             {
-              "expr": "powerSupplyCurrentInputVoltage",
+              "expr": "powerSupplyCurrentInputVoltage{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -1942,7 +1942,7 @@
           "pluginVersion": "7.4.3",
           "targets": [
             {
-              "expr": "temperatureProbeReading/10\n/ ignoring(temperatureProbeLocationName) group_right\ntemperatureProbeLocationName",
+              "expr": "temperatureProbeReading{instance=\"$Device\"}/10\n/ ignoring(temperatureProbeLocationName) group_right\ntemperatureProbeLocationName",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 1,
@@ -2019,7 +2019,7 @@
           "pluginVersion": "7.4.3",
           "targets": [
             {
-              "expr": "racFirmwareVersion",
+              "expr": "racFirmwareVersion{instance=\"$Device\"}",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 1,
@@ -2159,7 +2159,7 @@
           "pluginVersion": "7.4.3",
           "targets": [
             {
-              "expr": "memoryDeviceStatus\n/ ignoring(memoryDeviceLocationName) group_right\nmemoryDeviceLocationName",
+              "expr": "memoryDeviceStatus{instance=\"$Device\"}\n/ ignoring(memoryDeviceLocationName) group_right\nmemoryDeviceLocationName",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 1,
@@ -2284,7 +2284,7 @@
           "pluginVersion": "7.4.3",
           "targets": [
             {
-              "expr": "memoryDeviceStatus\n/ ignoring(memoryDeviceLocationName) group_right\nmemoryDeviceLocationName",
+              "expr": "memoryDeviceStatus{instance=\"$Device\"}\n/ ignoring(memoryDeviceLocationName) group_right\nmemoryDeviceLocationName",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 1,
@@ -2569,7 +2569,7 @@
           "pluginVersion": "7.4.3",
           "targets": [
             {
-              "expr": "memoryDeviceIndex",
+              "expr": "memoryDeviceIndex{instance=\"$Device\"}",
               "format": "table",
               "interval": "",
               "intervalFactor": 1,
@@ -2577,7 +2577,7 @@
               "refId": "A"
             },
             {
-              "expr": "memoryDeviceStateSettings",
+              "expr": "memoryDeviceStateSettings{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -2585,7 +2585,7 @@
               "refId": "C"
             },
             {
-              "expr": "memoryDeviceStatus",
+              "expr": "memoryDeviceStatus{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -2593,7 +2593,7 @@
               "refId": "D"
             },
             {
-              "expr": "memoryDeviceType_info",
+              "expr": "memoryDeviceType_info{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -2601,7 +2601,7 @@
               "refId": "E"
             },
             {
-              "expr": "memoryDeviceLocationName",
+              "expr": "memoryDeviceLocationName{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -2609,7 +2609,7 @@
               "refId": "F"
             },
             {
-              "expr": "memoryDeviceSize",
+              "expr": "memoryDeviceSize{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -2617,7 +2617,7 @@
               "refId": "G"
             },
             {
-              "expr": "memoryDeviceSpeed",
+              "expr": "memoryDeviceSpeed{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -2625,7 +2625,7 @@
               "refId": "H"
             },
             {
-              "expr": "memoryDeviceManufacturerName",
+              "expr": "memoryDeviceManufacturerName{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -2633,7 +2633,7 @@
               "refId": "I"
             },
             {
-              "expr": "memoryDevicePartNumberName",
+              "expr": "memoryDevicePartNumberName{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -2641,7 +2641,7 @@
               "refId": "J"
             },
             {
-              "expr": "memoryDeviceSerialNumberName",
+              "expr": "memoryDeviceSerialNumberName{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -2649,7 +2649,7 @@
               "refId": "K"
             },
             {
-              "expr": "memoryDeviceCurrentOperatingSpeed",
+              "expr": "memoryDeviceCurrentOperatingSpeed{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -3271,7 +3271,7 @@
           "pluginVersion": "7.4.3",
           "targets": [
             {
-              "expr": "controllerRollUpStatus",
+              "expr": "controllerRollUpStatus{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -3279,7 +3279,7 @@
               "refId": "E"
             },
             {
-              "expr": "controllerComponentStatus",
+              "expr": "controllerComponentStatus{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -3287,7 +3287,7 @@
               "refId": "F"
             },
             {
-              "expr": "controllerCacheSizeInMB",
+              "expr": "controllerCacheSizeInMB{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -3295,7 +3295,7 @@
               "refId": "J"
             },
             {
-              "expr": "controllerSecurityStatus",
+              "expr": "controllerSecurityStatus{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -3303,7 +3303,7 @@
               "refId": "N"
             },
             {
-              "expr": "controllerLoadBalanceSetting",
+              "expr": "controllerLoadBalanceSetting{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -3311,7 +3311,7 @@
               "refId": "Q"
             },
             {
-              "expr": "controllerMaxCapSpeed",
+              "expr": "controllerMaxCapSpeed{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -3319,7 +3319,7 @@
               "refId": "R"
             },
             {
-              "expr": "controllerDisplayName",
+              "expr": "controllerDisplayName{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -4502,7 +4502,7 @@
           "pluginVersion": "7.4.3",
           "targets": [
             {
-              "expr": "controllerRebuildRate",
+              "expr": "controllerRebuildRate{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -4510,7 +4510,7 @@
               "refId": "C"
             },
             {
-              "expr": "controllerReconstructRate",
+              "expr": "controllerReconstructRate{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -4518,7 +4518,7 @@
               "refId": "G"
             },
             {
-              "expr": "controllerPatrolReadRate",
+              "expr": "controllerPatrolReadRate{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -4526,7 +4526,7 @@
               "refId": "B"
             },
             {
-              "expr": "controllerBGIRate",
+              "expr": "controllerBGIRate{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -4534,7 +4534,7 @@
               "refId": "H"
             },
             {
-              "expr": "controllerCheckConsistencyRate",
+              "expr": "controllerCheckConsistencyRate{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -4542,7 +4542,7 @@
               "refId": "I"
             },
             {
-              "expr": "controllerDisplayName",
+              "expr": "controllerDisplayName{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -5772,7 +5772,7 @@
           "pluginVersion": "7.4.3",
           "targets": [
             {
-              "expr": "controllerName",
+              "expr": "controllerName{instance=\"$Device\"}",
               "format": "table",
               "interval": "",
               "intervalFactor": 1,
@@ -5780,7 +5780,7 @@
               "refId": "A"
             },
             {
-              "expr": "controllerFWVersion",
+              "expr": "controllerFWVersion{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -5788,7 +5788,7 @@
               "refId": "D"
             },
             {
-              "expr": "controllerDisplayName",
+              "expr": "controllerDisplayName{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -5796,7 +5796,7 @@
               "refId": "T"
             },
             {
-              "expr": "controllerDriverVersion",
+              "expr": "controllerDriverVersion{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -7088,7 +7088,7 @@
           "pluginVersion": "7.4.3",
           "targets": [
             {
-              "expr": "controllerSecurityStatus",
+              "expr": "controllerSecurityStatus{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -7096,7 +7096,7 @@
               "refId": "N"
             },
             {
-              "expr": "controllerEncryptionKeyPresent",
+              "expr": "controllerEncryptionKeyPresent{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -7104,7 +7104,7 @@
               "refId": "O"
             },
             {
-              "expr": "controllerEncryptionCapability",
+              "expr": "controllerEncryptionCapability{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -7112,7 +7112,7 @@
               "refId": "P"
             },
             {
-              "expr": "controllerDisplayName",
+              "expr": "controllerDisplayName{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -7120,7 +7120,7 @@
               "refId": "T"
             },
             {
-              "expr": "controllerT10PICapability",
+              "expr": "controllerT10PICapability{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -7801,14 +7801,14 @@
           "pluginVersion": "7.4.3",
           "targets": [
             {
-              "expr": "controllerPatrolReadMode",
+              "expr": "controllerPatrolReadMod{instance=\"$Device\"}",
               "hide": false,
               "interval": "",
               "legendFormat": "",
               "refId": "K"
             },
             {
-              "expr": "controllerPatrolReadState",
+              "expr": "controllerPatrolReadState{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -7816,7 +7816,7 @@
               "refId": "L"
             },
             {
-              "expr": "controllerCopyBackMode",
+              "expr": "controllerCopyBackMode{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -7824,7 +7824,7 @@
               "refId": "M"
             },
             {
-              "expr": "controllerLoadBalanceSetting",
+              "expr": "controllerLoadBalanceSetting{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -7832,7 +7832,7 @@
               "refId": "Q"
             },
             {
-              "expr": "controllerDisplayName",
+              "expr": "controllerDisplayName{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -7840,7 +7840,7 @@
               "refId": "T"
             },
             {
-              "expr": "controllerEnhancedAutoImportForeignConfigMode",
+              "expr": "controllerEnhancedAutoImportForeignConfigMode{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -7848,7 +7848,7 @@
               "refId": "W"
             },
             {
-              "expr": "controllerBootModeSupported",
+              "expr": "controllerBootModeSupported{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -7856,7 +7856,7 @@
               "refId": "X"
             },
             {
-              "expr": "controllerBootMode",
+              "expr": "controllerBootMode{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -7864,7 +7864,7 @@
               "refId": "Y"
             },
             {
-              "expr": "controllerCheckConsistencyMode",
+              "expr": "controllerCheckConsistencyMode{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -7872,7 +7872,7 @@
               "refId": "NA"
             },
             {
-              "expr": "controllerRAID10UnevenSpansSupported",
+              "expr": "controllerRAID10UnevenSpansSupported{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -8856,7 +8856,7 @@
           "pluginVersion": "7.4.3",
           "targets": [
             {
-              "expr": "physicalDiskName",
+              "expr": "physicalDiskName{instance=\"$Device\"}",
               "format": "table",
               "interval": "",
               "intervalFactor": 1,
@@ -8864,7 +8864,7 @@
               "refId": "A"
             },
             {
-              "expr": "physicalDiskSpareState",
+              "expr": "physicalDiskSpareState{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -8872,7 +8872,7 @@
               "refId": "B"
             },
             {
-              "expr": "physicalDiskComponentStatus",
+              "expr": "physicalDiskComponentStatus{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -8880,7 +8880,7 @@
               "refId": "H"
             },
             {
-              "expr": "physicalDiskSmartAlertIndication",
+              "expr": "physicalDiskSmartAlertIndication{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -8888,7 +8888,7 @@
               "refId": "L"
             },
             {
-              "expr": "physicalDiskPowerState",
+              "expr": "physicalDiskPowerState{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -8896,7 +8896,7 @@
               "refId": "N"
             },
             {
-              "expr": "physicalDiskRemainingRatedWriteEndurance",
+              "expr": "physicalDiskRemainingRatedWriteEndurance{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -8904,7 +8904,7 @@
               "refId": "O"
             },
             {
-              "expr": "physicalDiskOperationalState",
+              "expr": "physicalDiskOperationalState{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -8912,7 +8912,7 @@
               "refId": "P"
             },
             {
-              "expr": "physicalDiskProgress",
+              "expr": "physicalDiskProgress{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -8920,7 +8920,7 @@
               "refId": "Q"
             },
             {
-              "expr": "physicalDiskSecurityStatus",
+              "expr": "physicalDiskSecurityStatus{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -8928,7 +8928,7 @@
               "refId": "R"
             },
             {
-              "expr": "physicalDiskState",
+              "expr": "physicalDiskState{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -10420,7 +10420,7 @@
           "pluginVersion": "7.4.3",
           "targets": [
             {
-              "expr": "physicalDiskName",
+              "expr": "physicalDiskName{instance=\"$Device\"}",
               "format": "table",
               "interval": "",
               "intervalFactor": 1,
@@ -10428,7 +10428,7 @@
               "refId": "A"
             },
             {
-              "expr": "physicalDiskManufacturer",
+              "expr": "physicalDiskManufacturer{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -10436,7 +10436,7 @@
               "refId": "C"
             },
             {
-              "expr": "physicalDiskSerialNo",
+              "expr": "physicalDiskSerialNo{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -10444,7 +10444,7 @@
               "refId": "D"
             },
             {
-              "expr": "physicalDiskProductID",
+              "expr": "physicalDiskProductID{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -10452,7 +10452,7 @@
               "refId": "E"
             },
             {
-              "expr": "physicalDiskRevision",
+              "expr": "physicalDiskRevision{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -10460,7 +10460,7 @@
               "refId": "F"
             },
             {
-              "expr": "physicalDiskBusType",
+              "expr": "physicalDiskBusType{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -10468,7 +10468,7 @@
               "refId": "G"
             },
             {
-              "expr": "physicalDiskPartNumber",
+              "expr": "physicalDiskPartNumber{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -10476,7 +10476,7 @@
               "refId": "I"
             },
             {
-              "expr": "physicalDiskMediaType",
+              "expr": "physicalDiskMediaType{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -10484,7 +10484,7 @@
               "refId": "M"
             },
             {
-              "expr": "physicalDiskFormFactor",
+              "expr": "physicalDiskFormFactor{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -10492,7 +10492,7 @@
               "refId": "S"
             },
             {
-              "expr": "physicalDiskT10PICapability",
+              "expr": "physicalDiskT10PICapability{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -10500,7 +10500,7 @@
               "refId": "T"
             },
             {
-              "expr": "physicalDiskBlockSizeInBytes",
+              "expr": "physicalDiskBlockSizeInBytes{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -10508,7 +10508,7 @@
               "refId": "U"
             },
             {
-              "expr": "physicalDiskProtocolVersion",
+              "expr": "physicalDiskProtocolVersion{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -11096,7 +11096,7 @@
           "pluginVersion": "7.4.3",
           "targets": [
             {
-              "expr": "physicalDiskName",
+              "expr": "physicalDiskName{instance=\"$Device\"}",
               "format": "table",
               "interval": "",
               "intervalFactor": 1,
@@ -11104,7 +11104,7 @@
               "refId": "A"
             },
             {
-              "expr": "physicalDiskManufacturer",
+              "expr": "physicalDiskManufacturer{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -11112,7 +11112,7 @@
               "refId": "C"
             },
             {
-              "expr": "physicalDiskSerialNo",
+              "expr": "physicalDiskSerialNo{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -11120,7 +11120,7 @@
               "refId": "D"
             },
             {
-              "expr": "physicalDiskProductID",
+              "expr": "physicalDiskProductID{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -11128,7 +11128,7 @@
               "refId": "E"
             },
             {
-              "expr": "physicalDiskRevision",
+              "expr": "physicalDiskRevision{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -11136,7 +11136,7 @@
               "refId": "F"
             },
             {
-              "expr": "physicalDiskBusType",
+              "expr": "physicalDiskBusType{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -11144,7 +11144,7 @@
               "refId": "G"
             },
             {
-              "expr": "physicalDiskPartNumber",
+              "expr": "physicalDiskPartNumber{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -11152,7 +11152,7 @@
               "refId": "I"
             },
             {
-              "expr": "physicalDiskMediaType",
+              "expr": "physicalDiskMediaType{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -11160,7 +11160,7 @@
               "refId": "M"
             },
             {
-              "expr": "physicalDiskFormFactor",
+              "expr": "physicalDiskFormFactor{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -11168,7 +11168,7 @@
               "refId": "S"
             },
             {
-              "expr": "physicalDiskBlockSizeInBytes",
+              "expr": "physicalDiskBlockSizeInBytes{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -11176,7 +11176,7 @@
               "refId": "U"
             },
             {
-              "expr": "physicalDiskProtocolVersion",
+              "expr": "physicalDiskProtocolVersion{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -12610,7 +12610,7 @@
           "pluginVersion": "7.4.3",
           "targets": [
             {
-              "expr": "physicalDiskName",
+              "expr": "physicalDiskName{instance=\"$Device\"}",
               "format": "table",
               "interval": "",
               "intervalFactor": 1,
@@ -12618,7 +12618,7 @@
               "refId": "A"
             },
             {
-              "expr": "physicalDiskBusType",
+              "expr": "physicalDiskBusType{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -12626,7 +12626,7 @@
               "refId": "G"
             },
             {
-              "expr": "physicalDiskNegotiatedSpeed",
+              "expr": "physicalDiskNegotiatedSpeed{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -12634,7 +12634,7 @@
               "refId": "J"
             },
             {
-              "expr": "physicalDiskCapableSpeed",
+              "expr": "physicalDiskCapableSpeed{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -12642,7 +12642,7 @@
               "refId": "K"
             },
             {
-              "expr": "physicalDiskMediaType",
+              "expr": "physicalDiskMediaType{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -12650,7 +12650,7 @@
               "refId": "M"
             },
             {
-              "expr": "physicalDiskProtocolVersion",
+              "expr": "physicalDiskProtocolVersion{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -12658,7 +12658,7 @@
               "refId": "V"
             },
             {
-              "expr": "physicalDiskPCIeNegotiatedLinkWidth",
+              "expr": "physicalDiskPCIeNegotiatedLinkWidth{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -12666,7 +12666,7 @@
               "refId": "W"
             },
             {
-              "expr": "physicalDiskPCIeCapableLinkWidth",
+              "expr": "physicalDiskPCIeCapableLinkWidth{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -13303,7 +13303,7 @@
           "pluginVersion": "7.4.3",
           "targets": [
             {
-              "expr": "networkDeviceIndex",
+              "expr": "networkDeviceIndex{instance=\"$Device\"}",
               "format": "table",
               "interval": "",
               "intervalFactor": 1,
@@ -13311,7 +13311,7 @@
               "refId": "A"
             },
             {
-              "expr": "networkDeviceStatus",
+              "expr": "networkDeviceStatus{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -13319,7 +13319,7 @@
               "refId": "C"
             },
             {
-              "expr": "networkDeviceConnectionStatus",
+              "expr": "networkDeviceConnectionStatus{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -13327,7 +13327,7 @@
               "refId": "D"
             },
             {
-              "expr": "networkDeviceCurrentMACAddress",
+              "expr": "networkDeviceCurrentMACAddress{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -13335,7 +13335,7 @@
               "refId": "E"
             },
             {
-              "expr": "networkDevicePermanentMACAddress",
+              "expr": "networkDevicePermanentMACAddress{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -13343,7 +13343,7 @@
               "refId": "F"
             },
             {
-              "expr": "networkDeviceFQDD",
+              "expr": "networkDeviceFQDD{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -13351,7 +13351,7 @@
               "refId": "G"
             },
             {
-              "expr": "networkDeviceProductName",
+              "expr": "networkDeviceProductName{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -13359,7 +13359,7 @@
               "refId": "H"
             },
             {
-              "expr": "networkDeviceVendorName",
+              "expr": "networkDeviceVendorName{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -13704,7 +13704,7 @@
           "pluginVersion": "7.4.3",
           "targets": [
             {
-              "expr": "fruInformationStatus",
+              "expr": "fruInformationStatus{instance=\"$Device\"}",
               "format": "table",
               "interval": "",
               "intervalFactor": 1,
@@ -13712,7 +13712,7 @@
               "refId": "A"
             },
             {
-              "expr": "fruManufacturerName",
+              "expr": "fruManufacturerName{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -13720,7 +13720,7 @@
               "refId": "C"
             },
             {
-              "expr": "fruSerialNumberName",
+              "expr": "fruSerialNumberName{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -13728,7 +13728,7 @@
               "refId": "D"
             },
             {
-              "expr": "fruPartNumberName",
+              "expr": "fruPartNumberName{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -13736,7 +13736,7 @@
               "refId": "E"
             },
             {
-              "expr": "fruRevisionName",
+              "expr": "fruRevisionName{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -13744,7 +13744,7 @@
               "refId": "F"
             },
             {
-              "expr": "fruFQDD",
+              "expr": "fruFQDD{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -14135,7 +14135,7 @@
           "pluginVersion": "7.4.3",
           "targets": [
             {
-              "expr": "pCIDeviceIndex",
+              "expr": "pCIDeviceIndex{instance=\"$Device\"}",
               "format": "table",
               "interval": "",
               "intervalFactor": 1,
@@ -14143,7 +14143,7 @@
               "refId": "A"
             },
             {
-              "expr": "pCIDeviceStateSettings",
+              "expr": "pCIDeviceStateSettings{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -14151,7 +14151,7 @@
               "refId": "D"
             },
             {
-              "expr": "pCIDeviceStatus",
+              "expr": "pCIDeviceStatus{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -14159,7 +14159,7 @@
               "refId": "E"
             },
             {
-              "expr": "pCIDeviceManufacturerName",
+              "expr": "pCIDeviceManufacturerName{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -14167,7 +14167,7 @@
               "refId": "F"
             },
             {
-              "expr": "pCIDeviceDescriptionName",
+              "expr": "pCIDeviceDescriptionName{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
@@ -14175,7 +14175,7 @@
               "refId": "G"
             },
             {
-              "expr": "pCIDeviceFQDD",
+              "expr": "pCIDeviceFQDD{instance=\"$Device\"}",
               "format": "table",
               "hide": false,
               "interval": "",
